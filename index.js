@@ -769,9 +769,9 @@
             // Update the distance ran.
     this.distanceRan += this.currentSpeed * deltaTime / this.msPerFrame;
 
-    // Custom message for reaching 888 points.
-    if (this.distanceRan >= 888 && !this.customMessageShown) {
-        alert('Congratulations! You have reached 888 points.');
+    // Custom message for reaching 88 points.
+    if (this.distanceRan >= 88 && !this.customMessageShown) {
+        alert('Congratulations! You have reached 88 points.');
         this.customMessageShown = true;
     }
         },
