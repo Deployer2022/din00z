@@ -2734,8 +2734,6 @@
             this.canvas.height = height;
         },
 
-this.tRex.update(deltaTime, currentSpeed);
-this.runningTime += deltaTime;
         /**
          * Add a new cloud to the horizon.
          */
