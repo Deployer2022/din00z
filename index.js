@@ -2733,7 +2733,14 @@
             this.canvas.width = width;
             this.canvas.height = height;
         },
+var isAt88Points = this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan)) >= 88;
+if (isAt88Points) {
+    // Display message to player
+    alert('You have reached 88 points!');
+}
 
+this.tRex.update(deltaTime, currentSpeed);
+this.runningTime += deltaTime;
         /**
          * Add a new cloud to the horizon.
          */
