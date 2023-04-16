@@ -2721,7 +2721,18 @@
         if (isAt88Points) {
             // Display message to player
             alert('You have reached 88 points!');
+            if (this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan)) >= 88) {
+  var message = "Great Scott! You've reached 88 points!";
+  var dimensions = this.canvasCtx.measureText(message);
+  this.canvasCtx.save();
+  this.canvasCtx.fillStyle = "#000000";
+  this.canvasCtx.fillText(message, (this.dimensions.WIDTH - dimensions.width) / 2, this.dimensions.HEIGHT / 2);
+  this.canvasCtx.restore();
+}
+
+this.tRex.update(deltaTime, currentSpeed);
         }
+    
 
 this.tRex.update(deltaTime, currentSpeed);
 this.runningTime += deltaTime;
