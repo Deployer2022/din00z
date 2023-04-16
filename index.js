@@ -16,8 +16,6 @@
         if (Runner.instance_) {
             return Runner.instance_;
         }
-            this.customMessageShown = false;
-        }
         Runner.instance_ = this;
 
         this.outerContainerEl = document.querySelector(outerContainerId);
@@ -766,14 +764,6 @@
                 this.updatePending = true;
                 this.raqId = requestAnimationFrame(this.update.bind(this));
             }
-            // Update the distance ran.
-    this.distanceRan += this.currentSpeed * deltaTime / this.msPerFrame;
-
-    // Custom message for reaching 88 points.
-    if (this.distanceRan >= 88 && !this.customMessageShown) {
-        alert('Congratulations! You have reached 88 points.');
-        this.customMessageShown = true;
-    }
         },
 
         /**
